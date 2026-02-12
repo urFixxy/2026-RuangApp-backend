@@ -1,0 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using RuangApp.Api.Data;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<RuangAppContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("RuangAppContext") ?? throw new InvalidOperationException("Connection string 'RuangAppContext' not found.")));
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.MapControllers();
+
+app.Run();
