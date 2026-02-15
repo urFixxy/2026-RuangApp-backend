@@ -12,8 +12,8 @@ using RuangApp.Api.Data;
 namespace RuangApp.Api.Migrations
 {
     [DbContext(typeof(RuangAppContext))]
-    [Migration("20260212093607_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260215124251_InnitialCreate")]
+    partial class InnitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,6 +74,9 @@ namespace RuangApp.Api.Migrations
 
                     b.Property<int>("capacity")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("isAvailable")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("location")
                         .IsRequired()

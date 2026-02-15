@@ -72,6 +72,9 @@ namespace RuangApp.Api.Migrations
                     b.Property<int>("capacity")
                         .HasColumnType("integer");
 
+                    b.Property<bool>("isAvailable")
+                        .HasColumnType("boolean");
+
                     b.Property<string>("location")
                         .IsRequired()
                         .HasColumnType("text");

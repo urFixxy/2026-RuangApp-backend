@@ -8,4 +8,5 @@ public class Rooms
     public required string roomName { get; set; }
     public required string location { get; set; }
     public int capacity { get; set; }
+    public bool isAvailable { get; set; } = true;
 }

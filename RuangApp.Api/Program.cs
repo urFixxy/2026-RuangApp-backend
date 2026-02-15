@@ -10,6 +10,13 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<RuangAppContext>();
+    context.Database.Migrate();
+    Seeder.SeedData(context);
+}
+
 app.MapControllers();
 
 app.Run();
