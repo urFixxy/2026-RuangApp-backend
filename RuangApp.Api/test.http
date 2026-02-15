@@ -1,0 +1,66 @@
+GET http://localhost:5182/api/rooms
+
+###
+GET http://localhost:5182/api/rooms/1
+
+###
+POST http://localhost:5182/api/rooms
+Content-Type: application/json
+
+{
+  "roomName": "Conference Room B",
+  "location": "Second Floor",
+  "capacity": 20
+}
+
+###
+PUT http://localhost:5182/api/rooms/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "roomName": "Updated Conference Room A",
+  "location": "First Floor",
+  "capacity": 15
+}
+
+###
+DELETE http://localhost:5182/api/rooms/1
+
+###
+GET http://localhost:5182/api/borrowings
+
+###
+GET http://localhost:5182/api/borrowings/1
+
+###
+POST http://localhost:5182/api/borrowings
+Content-Type: application/json
+
+{
+  "borrowerName": "John Doe",
+  "roomId": 2,
+  "borrowingDate": "2024-07-01",
+  "startTime": "10:00:00",
+  "endTime": "12:00:00",
+  "purpose": "Team Meeting",
+  "status": "Pending"
+}
+
+###
+PUT http://localhost:5182/api/borrowings/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "borrowerName": "John Doe Updated",
+  "roomId": 2,
+  "borrowingDate": "2024-07-01",
+  "startTime": "10:00:00",
+  "endTime": "13:00:00",
+  "purpose": "Team Meeting Updated",
+  "status": "Approved"
+}
+
+###
+DELETE http://localhost:5182/api/borrowings/2
