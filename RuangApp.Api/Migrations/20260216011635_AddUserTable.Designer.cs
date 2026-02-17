@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RuangApp.Api.Data;
@@ -11,9 +12,11 @@ using RuangApp.Api.Data;
 namespace RuangApp.Api.Migrations
 {
     [DbContext(typeof(RuangAppContext))]
-    partial class RuangAppContextModelSnapshot : ModelSnapshot
+    [Migration("20260216011635_AddUserTable")]
+    partial class AddUserTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

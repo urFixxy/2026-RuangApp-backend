@@ -12,30 +12,30 @@ public static class Seeder
         }
 
         // Seed Rooms
-        var rooms = new List<Rooms>
+        var rooms = new List<Room>
         {
-            new Rooms
+            new Room
             {
                 roomName = "Ruang Meeting A",
                 capacity = 20,
                 location = "Lantai 1",
                 isAvailable = true
             },
-            new Rooms
+            new Room
             {
                 roomName = "Ruang Meeting B",
                 capacity = 15,
                 location = "Lantai 2",
                 isAvailable = true
             },
-            new Rooms
+            new Room
             {
                 roomName = "Ruang Konferensi",
                 capacity = 50,
                 location = "Lantai 3",
                 isAvailable = true
             },
-            new Rooms
+            new Room
             {
                 roomName = "Ruang Training",
                 capacity = 30,

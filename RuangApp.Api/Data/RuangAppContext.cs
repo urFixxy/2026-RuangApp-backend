@@ -7,5 +7,6 @@ namespace RuangApp.Api.Data;
 public class RuangAppContext(DbContextOptions<RuangAppContext> options) : DbContext(options)
 {
     public DbSet<Borrowing> Borrowings => Set<Borrowing>();
-    public DbSet<Rooms> Rooms => Set<Rooms>();
+    public DbSet<Room> Rooms => Set<Room>();
+    public DbSet<User> Users => Set<User>();
 }

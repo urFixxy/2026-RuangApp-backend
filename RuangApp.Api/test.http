@@ -64,3 +64,13 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5182/api/borrowings/2
+
+###
+POST http://localhost:5182/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+

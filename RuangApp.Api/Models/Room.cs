@@ -2,7 +2,7 @@ using System;
 
 namespace RuangApp.Api.Models;
 
-public class Rooms
+public class Room
 {
     public int Id { get; set; }
     public required string roomName { get; set; }
